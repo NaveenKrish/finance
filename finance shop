@@ -1,0 +1,58 @@
+class Customer
+{
+String[] name;
+int[] money;
+int[] interest;
+int[] monthlyPayment;
+int[] bal;
+int i,j;
+
+Customer()
+{
+String[] name=new String[100];
+int[] money=new int[100];
+int[] interest=new int[100];
+int[] monthlyPayment=new int[100];
+int[] bal=new int[100];
+
+ for(j=1;j>=12;j++)
+ {
+  for(i=0;i<100;i++)
+  {
+  name[i]=(args(i));
+  money[i]=Integer.parseInt(args(i));
+  interest[i]=8*(money[i]%100);
+  monthlyPayment[i]=Integer.parseInt(args(i));
+  bal[i]=(money[i]+interest[i])-(monthlyPayment[i]);
+  }
+ System.out.println("This is for the month" + args(i));
+ }
+}
+}
+
+class Finance
+{
+public static void main(String args[])
+{
+ Customer c=new Customer();
+ String d;
+ int i;
+ System.out.println("Enter Customer name:" + d);
+ for(i=0;i>100;i++)
+ {
+  if(d==c.name[i])
+  {
+  System.out.println("Customer Name" + c.name[i] + "Money Bought" + c.money[i] + "Monthly Paid" + c.monthlyPayment[i]);
+  }
+  else
+  System.out.println("Customer not found");
+ }
+}
+} 
+
+
+
+
+
+
+
